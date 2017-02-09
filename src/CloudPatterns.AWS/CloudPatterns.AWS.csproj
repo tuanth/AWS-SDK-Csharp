@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67B76113-AB76-4AC8-9A1B-FD615C440EDB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CloudPatterns.AWS</RootNamespace>
+    <AssemblyName>CloudPatterns.AWS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK.APIGateway">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.APIGateway.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ApplicationAutoScaling">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ApplicationAutoScaling.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ApplicationDiscoveryService">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ApplicationDiscoveryService.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.AppStream">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.AppStream.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.AutoScaling">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.AutoScaling.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.AWSHealth">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.AWSHealth.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.AWSMarketplaceCommerceAnalytics">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.AWSMarketplaceCommerceAnalytics.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.AWSMarketplaceMetering">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.AWSMarketplaceMetering.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.AWSSupport">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.AWSSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Budgets">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Budgets.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CertificateManager">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CertificateManager.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CloudFormation">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CloudFormation.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CloudFront">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CloudFront.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CloudHSM">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CloudHSM.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CloudSearch">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CloudSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CloudSearchDomain">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CloudSearchDomain.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CloudTrail">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CloudTrail.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CloudWatch">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CloudWatch.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CloudWatchEvents">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CloudWatchEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CloudWatchLogs">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CloudWatchLogs.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CodeBuild">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CodeBuild.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CodeCommit">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CodeCommit.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CodeDeploy">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CodeDeploy.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CodePipeline">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CodePipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CognitoIdentity">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CognitoIdentity.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CognitoIdentityProvider">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CognitoIdentityProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CognitoSync">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.CognitoSync.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ConfigService">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ConfigService.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Core">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.DatabaseMigrationService">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.DatabaseMigrationService.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.DataPipeline">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.DataPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.DeviceFarm">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.DeviceFarm.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.DirectConnect">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.DirectConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.DirectoryService">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.DirectoryService.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.DynamoDBv2">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.DynamoDBv2.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.EC2">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.EC2.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ECR">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ECR.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ECS">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ECS.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ElastiCache">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ElastiCache.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ElasticBeanstalk">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ElasticBeanstalk.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ElasticFileSystem">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ElasticFileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ElasticLoadBalancing">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ElasticLoadBalancing.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ElasticLoadBalancingV2">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ElasticLoadBalancingV2.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ElasticMapReduce">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ElasticMapReduce.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Elasticsearch">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Elasticsearch.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ElasticTranscoder">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ElasticTranscoder.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.GameLift">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.GameLift.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Glacier">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Glacier.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.IdentityManagement">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.IdentityManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ImportExport">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ImportExport.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Inspector">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Inspector.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.IoT">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.IoT.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.IotData">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.IotData.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.KeyManagementService">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.KeyManagementService.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Kinesis">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Kinesis.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.KinesisAnalytics">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.KinesisAnalytics.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.KinesisFirehose">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.KinesisFirehose.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Lambda">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Lambda.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Lightsail">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Lightsail.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.MachineLearning">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.MobileAnalytics">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.MobileAnalytics.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.OpsWorks">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.OpsWorks.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.OpsWorksCM">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.OpsWorksCM.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Pinpoint">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Pinpoint.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Polly">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.RDS">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.RDS.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Redshift">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Redshift.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Rekognition">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Rekognition.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Route53">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Route53.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Route53Domains">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Route53Domains.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.S3">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SecurityToken">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.SecurityToken.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ServerMigrationService">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ServerMigrationService.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.ServiceCatalog">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.ServiceCatalog.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Shield">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Shield.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SimpleDB">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.SimpleDB.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SimpleEmail">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.SimpleEmail.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SimpleNotificationService">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.SimpleNotificationService.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SimpleSystemsManagement">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.SimpleSystemsManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SimpleWorkflow">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.SimpleWorkflow.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Snowball">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.Snowball.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SQS">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.SQS.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.StepFunctions">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.StepFunctions.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.StorageGateway">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.StorageGateway.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.WAF">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.WAF.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.WorkSpaces">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.WorkSpaces.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.XRay">
+      <HintPath>C:\Program Files (x86)\AWS SDK for .NET\bin\Net45\AWSSDK.XRay.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\ITableDataService.cs" />
+    <Compile Include="DynamoDb\DynamoService.cs" />
+    <Compile Include="Entities\DynamoTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
